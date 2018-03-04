@@ -18,15 +18,27 @@ https://en.wikipedia.org/wiki/Metadata_removal_tool
 https://stackoverflow.com/questions/19786301/python-remove-exif-info-from-images
 
 ## exiftool
-https://superuser.com/questions/335489/how-to-strip-exif-info-from-files-in-osx-with-batch-or-command-line
+http://libre-software.net/edit-metadata-exiftool/
 https://sno.phy.queensu.ca/~phil/exiftool/
+https://superuser.com/questions/335489/how-to-strip-exif-info-from-files-in-osx-with-batch-or-command-line
 http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Remove-EXIF-Metadata-from-Photos-with-exiftool
 
     brew install exiftool
 
 ### from command line
 
+#### Remove all metadata from a file:
+
     exiftool -all= foo.jpg
+    exiftool -all= -overwrite_original "file name.extension"
+
+#### Remove all metadata from the current directory:
+
+    exiftool -all= -overwrite_original .
+
+#### Remove all metadata from all png files in the working directory:
+
+    exiftool -all= -overwrite_original -ext png .
 
     for i in *.jpg; do echo "Processing $i"; exiftool -all= "$i"; done
 
