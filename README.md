@@ -3,9 +3,11 @@ Use python to edit image exif data.
 
 # References
 
-https://www.askdavetaylor.com/can-i-analyze-exif-information-on-the-mac-os-x-command-line/
+## Python: Remove exif info from images
+https://stackoverflow.com/questions/19786301/python-remove-exif-info-from-images
 
 ## mdls
+https://www.askdavetaylor.com/can-i-analyze-exif-information-on-the-mac-os-x-command-line/
 can write to xml file
 
 ## imagemagick
