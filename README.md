@@ -20,6 +20,8 @@ https://stackoverflow.com/questions/19786301/python-remove-exif-info-from-images
 ## exiftool
 https://superuser.com/questions/335489/how-to-strip-exif-info-from-files-in-osx-with-batch-or-command-line
 https://sno.phy.queensu.ca/~phil/exiftool/
+http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Remove-EXIF-Metadata-from-Photos-with-exiftool
+
     brew install exiftool
 
 ### from command line
