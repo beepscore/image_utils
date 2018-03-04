@@ -3,6 +3,17 @@ Use python to edit image exif data.
 
 # References
 
+## exif
+https://en.wikipedia.org/wiki/Exif
+originally for jpeg,tiff, wav.
+not for gif
+### png optionally supports exif chunk
+as of 2017-07
+https://stackoverflow.com/questions/9542359/does-png-contain-exif-data-like-jpg#9576717
+
+## Metadata removal tool
+https://en.wikipedia.org/wiki/Metadata_removal_tool
+
 ## Python Tutorial: Image Manipulation with Pillow
 https://youtu.be/6Qs3wObeWwc
 
@@ -25,6 +36,7 @@ https://github.com/beepscore/image_play
 ### example exif keys
 kMDItemAuthors
 kMDItemWhereFroms
+
 
 
 # Appendix mdls
