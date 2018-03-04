@@ -137,3 +137,8 @@ data/*
 #*.xlsx
 
 .ipynb_checkpoints
+
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
