@@ -22,6 +22,14 @@ https://superuser.com/questions/335489/how-to-strip-exif-info-from-files-in-osx-
 https://sno.phy.queensu.ca/~phil/exiftool/
     brew install exiftool
 
+### from command line
+
+    exiftool -all= foo.jpg
+    
+### from python
+
+            subprocess.run(["exiftool", "-all=", filename])
+
 ## imagemagick
 can strip exif
     convert orig.jpg -strip result.jpg

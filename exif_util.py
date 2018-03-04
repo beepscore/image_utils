@@ -1,6 +1,5 @@
-
+import subprocess
 import os
-from PIL import Image
 
 
 def strip_exif(in_dir):
@@ -19,16 +18,12 @@ def strip_exif(in_dir):
             filename_base, filename_ext = os.path.splitext(filename)
             print(filename_base, filename_ext)
 
-            image = Image.open(filename)
-            data = list(image.getdata())
-
-            # image_new doesn't contain exif metadata
-            image_new = Image.new(image.mode, image.size)
-            image_new.putdata(data)
-
-            filename_new_base = filename_base + '_no_exif'
-            filename_new = filename_new_base + filename_ext
-            image_new.save(filename_new)
+            # tested with one file in project root directory
+            # exiftool removed exif metadata from original file and
+            # made a copy by appending "_original"
+            # apparently exiftool did not recompress files.
+            # https://docs.python.org/3/library/subprocess.html#module-subprocess
+            subprocess.run(["exiftool", "-all=", filename])
 
 
 if __name__ == '__main__':
