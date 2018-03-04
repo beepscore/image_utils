@@ -34,6 +34,12 @@ http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Remove-EXIF-Metada
 
     subprocess.run(["exiftool", "-all=", filename])
 
+### Security Issues
+Some ExifTool options (-if, -p, -api filter and copying arguments like "-DSTTAG<STR") have the ability to execute Perl code from within command-line arguments.
+This may be a security problem if ExifTool is executed from another application that blindly passes untrusted file names on the command line (since they may be interpreted as ExifTool options if they begin with a dash).
+To be secure, the calling application must ensure that input file names do not start with a dash (U+002D) or a Unicode minus sign (U+2212).
+The easiest way to accomplish this is to prefix input file names with a known directory name, eg.) "./FILENAME".
+
 ## imagemagick
 can strip exif
     convert orig.jpg -strip result.jpg
