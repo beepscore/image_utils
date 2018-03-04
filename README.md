@@ -14,22 +14,33 @@ https://stackoverflow.com/questions/9542359/does-png-contain-exif-data-like-jpg#
 ## Metadata removal tool
 https://en.wikipedia.org/wiki/Metadata_removal_tool
 
-## Python Tutorial: Image Manipulation with Pillow
-https://youtu.be/6Qs3wObeWwc
-
 ## Python: Remove exif info from images
 https://stackoverflow.com/questions/19786301/python-remove-exif-info-from-images
 
-## mdls
-https://www.askdavetaylor.com/can-i-analyze-exif-information-on-the-mac-os-x-command-line/
-can write to xml file
+## exiftool
+https://superuser.com/questions/335489/how-to-strip-exif-info-from-files-in-osx-with-batch-or-command-line
+https://sno.phy.queensu.ca/~phil/exiftool/
+    brew install exiftool
 
 ## imagemagick
 can strip exif
+    convert orig.jpg -strip result.jpg
+
+## Python Tutorial: Image Manipulation with Pillow
+https://youtu.be/6Qs3wObeWwc
+
+## mdls
+https://www.askdavetaylor.com/can-i-analyze-exif-information-on-the-mac-os-x-command-line/
+macOS, for reading, not writing
+for more info see appendix
 
 ## image_play
 Practice using Python scikit-image
 https://github.com/beepscore/image_play
+
+## Calling an external command in Python
+subprocess.run
+https://stackoverflow.com/questions/89228/calling-an-external-command-in-python#89243
 
 # Results
 
@@ -45,6 +56,10 @@ Would be preferable to just strip exif.
 
 
 # Appendix mdls
+macOS metadata list attributes
+for reading, not writing
+can write to xml file
+https://en.wikipedia.org/wiki/Spotlight_(software)
 
 ## command line
 
