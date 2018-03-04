@@ -30,7 +30,7 @@ http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Remove-EXIF-Metada
     
 ### from python
 
-            subprocess.run(["exiftool", "-all=", filename])
+    subprocess.run(["exiftool", "-all=", filename])
 
 ## imagemagick
 can strip exif
