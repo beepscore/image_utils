@@ -37,6 +37,11 @@ https://github.com/beepscore/image_play
 kMDItemAuthors
 kMDItemWhereFroms
 
+## Approach 1 write new file
+Used Pillow to test write a new jpeg file.
+This removed exif data, but apparently recompressed file, reduced file size from 1 Mb to 416 kb.
+
+Would be preferable to just strip exif.
 
 
 # Appendix mdls
