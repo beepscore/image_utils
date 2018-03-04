@@ -1,6 +1,5 @@
 
 import os
-from pathlib import Path
 from PIL import Image
 
 
@@ -20,10 +19,7 @@ def strip_exif(in_dir):
             filename_base, filename_ext = os.path.splitext(filename)
             print(filename_base, filename_ext)
 
-            # UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
-            image_file = open(filename)
-
-            image = Image.open(image_file)
+            image = Image.open(filename)
             data = list(image.getdata())
 
             # image_new doesn't contain exif metadata
@@ -31,7 +27,7 @@ def strip_exif(in_dir):
             image_new.putdata(data)
 
             filename_new_base = filename_base + '_no_exif'
-            filename_new = Path.joinpath(filename_new_base).with_suffix(filename_ext)
+            filename_new = filename_new_base + filename_ext
             image_new.save(filename_new)
 
 
