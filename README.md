@@ -27,7 +27,9 @@ http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Remove-EXIF-Metada
 ### from command line
 
     exiftool -all= foo.jpg
-    
+
+    for i in *.jpg; do echo "Processing $i"; exiftool -all= "$i"; done
+
 ### from python
 
     subprocess.run(["exiftool", "-all=", filename])
