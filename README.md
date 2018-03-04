@@ -3,6 +3,9 @@ Use python to edit image exif data.
 
 # References
 
+## Python Tutorial: Image Manipulation with Pillow
+https://youtu.be/6Qs3wObeWwc
+
 ## Python: Remove exif info from images
 https://stackoverflow.com/questions/19786301/python-remove-exif-info-from-images
 
