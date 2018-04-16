@@ -1,5 +1,5 @@
 # Purpose
-Use python to edit image exif data.
+Remove exif metadata from images. Started with Python, then switched to command line exiftool.
 
 # References
 
