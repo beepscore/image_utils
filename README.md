@@ -118,4 +118,4 @@ instead of grep you can directly access the data with
 
 # Appendix Anaconda environment
 
-    source activate beepscore
+    conda activate beepscore
