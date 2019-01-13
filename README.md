@@ -4,11 +4,13 @@ Remove exif metadata from images. Started with Python, then switched to command 
 # References
 
 ## exif
+originally for jpeg,tiff, wav. not for gif.
+
 https://en.wikipedia.org/wiki/Exif
-originally for jpeg,tiff, wav.
-not for gif
+
 ### png optionally supports exif chunk
 as of 2017-07
+
 https://stackoverflow.com/questions/9542359/does-png-contain-exif-data-like-jpg#9576717
 
 ## Metadata removal tool
@@ -19,8 +21,11 @@ https://stackoverflow.com/questions/19786301/python-remove-exif-info-from-images
 
 ## exiftool
 http://libre-software.net/edit-metadata-exiftool/
+
 https://sno.phy.queensu.ca/~phil/exiftool/
+
 https://superuser.com/questions/335489/how-to-strip-exif-info-from-files-in-osx-with-batch-or-command-line
+
 http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Remove-EXIF-Metadata-from-Photos-with-exiftool
 
     brew install exiftool
@@ -60,25 +65,28 @@ can strip exif
 https://youtu.be/6Qs3wObeWwc
 
 ## mdls
+macOS, for reading, not writing. For more info see appendix.
+
 https://www.askdavetaylor.com/can-i-analyze-exif-information-on-the-mac-os-x-command-line/
-macOS, for reading, not writing
-for more info see appendix
 
 ## image_play
 Practice using Python scikit-image
+
 https://github.com/beepscore/image_play
 
 ## Calling an external command in Python
 subprocess.run
+
 https://stackoverflow.com/questions/89228/calling-an-external-command-in-python#89243
 
 # Results
 
 ### example exif keys
 kMDItemAuthors
+
 kMDItemWhereFroms
 
-## Approach 1 write new file
+## First approach: write new file
 Used Pillow to test write a new jpeg file.
 This removed exif data, but apparently recompressed file, reduced file size from 1 Mb to 416 kb.
 
@@ -86,9 +94,10 @@ Would be preferable to just strip exif.
 
 
 # Appendix mdls
-macOS metadata list attributes
-for reading, not writing
-can write to xml file
+macOS metadata list attributes.
+For reading, not writing.
+Can write to xml file.
+
 https://en.wikipedia.org/wiki/Spotlight_(software)
 
 ## command line
